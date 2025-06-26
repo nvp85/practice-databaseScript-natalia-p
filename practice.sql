@@ -19,7 +19,7 @@ CREATE TABLE sessions (
 id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 theater_id INT,
 movie_id INT,
-auditorioum INT,
+auditorium INT,
 price DECIMAL,
 FOREIGN KEY (theater_id) REFERENCES theaters(id),
 FOREIGN KEY (movie_id) REFERENCES movies(id)
@@ -34,4 +34,4 @@ VALUES (1, 'The test theater', '123 Main St.', 4);
 INSERT INTO sessions
 VALUES (1, 1, 1, 4, 8.0);
 
-rollback;
+commit;
